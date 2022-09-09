@@ -27,7 +27,7 @@ public class CalculatorUI extends javafx.application.Application {
         TilePane tile = createTile(createAllButtons());
         root.setTop(field);
         root.setCenter(tile);
-        Scene scene = new Scene(root, 500, 500);
+        Scene scene = new Scene(root, 431, 391);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -124,7 +124,7 @@ public class CalculatorUI extends javafx.application.Application {
     }
 
     public void toggleButtons(String toggle) {
-        if (toggle == "disable") {
+        if (toggle.equals("disable")) {
             buttonArrayList.get(0).setDisable(true);
             buttonArrayList.get(1).setDisable(true);
             buttonArrayList.get(2).setDisable(true);

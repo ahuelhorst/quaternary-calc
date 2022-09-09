@@ -11,11 +11,13 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 public class CalculatorUI extends javafx.application.Application {
-    TextField field = new TextField();
-    ArrayList<Button> buttonArrayList = new ArrayList<>();
-    String numOne;
-    String numTwo;
-    String operator;
+    private TextField field = new TextField();
+    private ArrayList<Button> buttonArrayList = new ArrayList<>();
+    private String numOne;
+    private String numTwo;
+    private String total;
+    private String operator;
+    private Main main = new Main();
 
     @Override
     public void start(Stage primaryStage) {
@@ -36,6 +38,7 @@ public class CalculatorUI extends javafx.application.Application {
         return button;
     }
     public ArrayList<Button> createAllButtons(){
+        //add button
         buttonArrayList.add(createButton("+"));
         EventHandler<ActionEvent> add = e -> {
             operator = "+";
@@ -44,6 +47,7 @@ public class CalculatorUI extends javafx.application.Application {
             field.clear();
         };
         buttonArrayList.get(0).setOnAction(add);
+        //subtract button
         buttonArrayList.add(createButton("-"));
         EventHandler<ActionEvent> subtract = e -> {
             operator = "-";
@@ -52,6 +56,7 @@ public class CalculatorUI extends javafx.application.Application {
             field.clear();
         };
         buttonArrayList.get(1).setOnAction(subtract);
+        //multiply button
         buttonArrayList.add(createButton("*"));
         EventHandler<ActionEvent> multiply = e -> {
             operator = "*";
@@ -60,6 +65,7 @@ public class CalculatorUI extends javafx.application.Application {
             field.clear();
         };
         buttonArrayList.get(2).setOnAction(multiply);
+        //divide button
         buttonArrayList.add(createButton("/"));
         EventHandler<ActionEvent> divide = e -> {
             operator = "/";
@@ -68,24 +74,40 @@ public class CalculatorUI extends javafx.application.Application {
             field.clear();
         };
         buttonArrayList.get(0).setOnAction(divide);
+        //square button
         buttonArrayList.add(createButton("X\u00B2")); //Square
+        //square root button
         buttonArrayList.add(createButton("\u221A")); //Square Root
+        //equals button
         buttonArrayList.add(createButton("="));
+        EventHandler<ActionEvent> equals = e -> {
+            toggleButtons("enable");
+            numTwo = field.toString();
+            field.clear();
+            total = main.calculateExpression(numOne,operator,numTwo).toString();
+            field.setText(total);
+        };
+        buttonArrayList.get(6).setOnAction(equals);
+        //clear button
         buttonArrayList.add(createButton("C"));
         EventHandler<ActionEvent> clear = e -> {
             field.clear();
             toggleButtons("enable");
         };
         buttonArrayList.get(7).setOnAction(clear);
+        // zero button
         buttonArrayList.add(createButton("0"));
         EventHandler<ActionEvent> zero = e -> field.appendText("0");
         buttonArrayList.get(8).setOnAction(zero);
+        //one button
         buttonArrayList.add(createButton("1"));
         EventHandler<ActionEvent> one = e -> field.appendText("1");
         buttonArrayList.get(9).setOnAction(one);
+        //two button
         buttonArrayList.add(createButton("2"));
         EventHandler<ActionEvent> two = e -> field.appendText("2");
         buttonArrayList.get(10).setOnAction(two);
+        //three button
         buttonArrayList.add(createButton("3"));
         EventHandler<ActionEvent> three = e -> field.appendText("3");
         buttonArrayList.get(11).setOnAction(three);

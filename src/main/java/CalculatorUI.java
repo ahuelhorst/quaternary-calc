@@ -20,14 +20,14 @@ public class CalculatorUI extends javafx.application.Application {
         TilePane tile = createTile(createAllButtons());
         root.setTop(field);
         root.setCenter(tile);
-        Scene scene = new Scene(root, 280,370);
+        Scene scene = new Scene(root, 330, 370);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
     public Button createButton(String operator){
         Button button = new Button(operator);
         button.setFont(new Font(30));
-        button.setPrefSize(50,50);
+        button.setPrefSize(100,100);
         return button;
     }
     public ArrayList<Button> createAllButtons(){
@@ -36,8 +36,8 @@ public class CalculatorUI extends javafx.application.Application {
         buttonArrayList.add(createButton("-"));
         buttonArrayList.add(createButton("*"));
         buttonArrayList.add(createButton("/"));
-        buttonArrayList.add(createButton("S"));
-        buttonArrayList.add(createButton("R"));
+        buttonArrayList.add(createButton("X\u00B2")); //Square
+        buttonArrayList.add(createButton("\u221A")); //Square Root
         buttonArrayList.add(createButton("="));
         buttonArrayList.add(createButton("C"));
         buttonArrayList.add(createButton("0"));

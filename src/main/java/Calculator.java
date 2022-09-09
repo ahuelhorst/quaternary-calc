@@ -37,7 +37,7 @@ public class Calculator {
             return convertor.revert(tst);
         }
         else{
-            return "Error";
+            return null;
         }
     }
 }

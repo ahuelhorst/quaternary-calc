@@ -17,7 +17,7 @@
     - <strong>Date</strong>: September 8, 2022, 7:00 pm
     - <strong>Medium</strong>: In-person at Bracken Library
     - <strong>Members</strong>: Abigail Huelhorst, Lucas Harris, Nathan Lindholm, Brendan May
-    - <strong>Discussion</strong>: How to finish up logic and get UI started
+    - <strong>Discussion</strong>: Finish up logic and get UI started
     - <strong>Tasks</strong>:
         - Abigail = Converter logic
         - Lucas =  Readme
@@ -31,5 +31,6 @@
     - <strong>Tasks</strong>:
         - Abigail = UI
         - Lucas =  Tests
-        - Nathan = ReadMe, Tests
+        - Nathan = ReadMe, UI
         - Luke = UI
+        - Brenden = Toggle button

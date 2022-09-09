@@ -18,9 +18,4 @@ public class Tests {
         Assertions.assertEquals(base4, 123);
     }
 
-    @Test
-    public void addTest(){
-        int sum = calculator.add(5,10);
-        Assertions.assertEquals(sum,15);
-    }
 }

@@ -65,10 +65,32 @@ public class Tests {
         Assertions.assertEquals(10,sqrt); // 10 base4 = 4 base10
     }
 
+    //Main method
     @Test
-    public void calcExpressionsTest(){
+    public void calcExpressionsAdditionTest(){
         int expected = 12;
         int actual = main.calculateExpression("10+2");
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void calcExpressionsSubtractTest(){
+        int expected = 12;
+        int actual = main.calculateExpression("20-2");
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void calcExpressionsMultiplyTest(){
+        int expected = 12;
+        int actual = main.calculateExpression("3*2");
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void calcExpressionsDivisionTest(){
+        int expected = 3;
+        int actual = main.calculateExpression("12/2");
         Assertions.assertEquals(expected,actual);
     }
 }

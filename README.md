@@ -39,5 +39,6 @@
     <img width="359" alt="run" src="https://user-images.githubusercontent.com/89402649/189438829-a8f5a448-234e-438c-a8e5-8c798c872240.png">
  - <strong><u>To run application:</u></strong>
    - For square & square root: select number, then select operator (square or square root)
+   - For all other operations(+,-,*,/): select first number, then select operator, then press "=" button
 
    

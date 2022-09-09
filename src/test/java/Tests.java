@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
+import java.lang.constant.Constable;
+
 public class Tests {
 
     Convertor converter = new Convertor();
@@ -63,6 +65,13 @@ public class Tests {
         //sqrt of 16=4?
         int sqrt = (int) calculator.squareRoot("100"); // 100 base4 = 16 base10
         Assertions.assertEquals(10,sqrt); // 10 base4 = 4 base10
+    }
+
+    @Test
+    public void squareRootTest3(){
+        //sqrt of 10=null?
+        Constable sqrt = calculator.squareRoot("22"); // 22 base4 = 10 base10
+        Assertions.assertNull(sqrt);
     }
 
     //Main method

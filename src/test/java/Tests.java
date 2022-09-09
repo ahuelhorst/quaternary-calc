@@ -6,6 +6,7 @@ public class Tests {
     Convertor converter = new Convertor();
     Calculator calculator = new Calculator();
 
+    //Convertor methods
     @Test
     public void covertTest(){
         int decimal = converter.convert("123");
@@ -17,5 +18,42 @@ public class Tests {
         int base4 = converter.revert(27);
         Assertions.assertEquals(base4, 123);
     }
+
+    //Calculator methods
+    @Test
+    public void squareTest(){
+        int sqa = calculator.square("12");
+        Assertions.assertEquals(210,sqa);
+    }
+
+    @Test
+    public void addTest(){
+        int sum = calculator.add("2","2");
+        Assertions.assertEquals(10,sum);
+    }
+
+    @Test
+    public void divideTest(){
+        int ans = calculator.divide("210","12");
+        Assertions.assertEquals(12,ans);
+    }
+
+    @Test
+    public void subtractTest(){
+        int ans = calculator.subtract("12","3");
+        Assertions.assertEquals(3,ans);
+    }
+
+    @Test
+    public void multiplyTest(){
+        int ans = calculator.multiply("3","5");
+        Assertions.assertEquals(33,ans);
+    }
+
+//    @Test
+//    public void squareRootTest(){
+//        int sqrt = calculator.squareRoot("21");
+//        Assertions.assertEquals(3,sqrt);
+//    }
 
 }

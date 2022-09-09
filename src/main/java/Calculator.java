@@ -22,4 +22,8 @@ public class Calculator {
         return convertor.revert(newNum1 * newNum2);
     }
 
+    public int square(String num1){
+        int newNum1 = convertor.convert(num1);
+        return convertor.revert(newNum1*newNum1);
+    }
 }

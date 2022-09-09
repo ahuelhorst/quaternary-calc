@@ -22,4 +22,13 @@
         - Abigail = Converter logic
         - Lucas =  Readme
         - Brendan = UI
-        - Nathan = Testing
+        - Nathan = Tests
+- <strong><u>Meeting 3</u></strong>
+    - <strong>Date</strong>: September 9, 2022, 1:00 pm
+    - <strong>Medium</strong>: In-person at Bracken Library
+    - <strong>Members</strong>: Abigail Huelhorst, Lucas Harris, Nathan Lindholm
+    - <strong>Discussion</strong>: Work on UI
+    - <strong>Tasks</strong>:
+        - Abigail = UI
+        - Lucas =  Tests
+        - Nathan = ReadMe

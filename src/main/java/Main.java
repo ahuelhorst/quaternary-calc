@@ -6,22 +6,22 @@ public class Main {
     //takes math expression(String) as param and returns answer(int)
     public Constable calculateExpression(String num1, String operator, String num2) {
         Constable answer = 0;
-        if (operator == "+") {
+        if (operator.equals("+")) {
             answer = calculator.add(num1, num2);
         }
-        if (operator == "-") {
+        if (operator.equals("-")) {
             answer = calculator.subtract(num1, num2);
         }
-        if (operator == "*") {
+        if (operator.equals("*")) {
             answer = calculator.multiply(num1, num2);
         }
-        if (operator == "/") {
+        if (operator.equals("/")) {
             answer = calculator.divide(num1, num2);
         }
-        if (operator == "X\u00B2") {
+        if (operator.equals("X\u00B2")) {
             answer = calculator.square(num1);
         }
-        if (operator == "\u221A") {
+        if (operator.equals("\u221A")) {
             answer = calculator.squareRoot(num1);
         }
         return answer;

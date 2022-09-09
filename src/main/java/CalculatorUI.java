@@ -92,11 +92,11 @@ public class CalculatorUI extends javafx.application.Application {
         buttonArrayList.add(createButton("\u221A")); //Square Root
         EventHandler<ActionEvent> root = e -> {
             operator = "root";
-            toggleButtons("disable");
             numOne = field.getText();
             field.clear();
             total = calc.squareRoot(numOne);
-            if (total == null){
+            if (total == "Error"){
+                toggleButtons("all-disable");
                 field.setText("Error");
             }
             else{
@@ -151,6 +151,7 @@ public class CalculatorUI extends javafx.application.Application {
     }
 
     public void toggleButtons(String toggle) {
+        System.out.println(toggle);
         if (toggle.equals("disable")) {
             buttonArrayList.get(0).setDisable(true);
             buttonArrayList.get(1).setDisable(true);
@@ -158,6 +159,18 @@ public class CalculatorUI extends javafx.application.Application {
             buttonArrayList.get(3).setDisable(true);
             buttonArrayList.get(4).setDisable(true);
             buttonArrayList.get(5).setDisable(true);
+        } else if (toggle.equals("all-disable")) {
+            buttonArrayList.get(0).setDisable(true);
+            buttonArrayList.get(1).setDisable(true);
+            buttonArrayList.get(2).setDisable(true);
+            buttonArrayList.get(3).setDisable(true);
+            buttonArrayList.get(4).setDisable(true);
+            buttonArrayList.get(5).setDisable(true);
+            buttonArrayList.get(6).setDisable(true);
+            buttonArrayList.get(8).setDisable(true);
+            buttonArrayList.get(9).setDisable(true);
+            buttonArrayList.get(10).setDisable(true);
+            buttonArrayList.get(11).setDisable(true);
         } else {
             buttonArrayList.get(0).setDisable(false);
             buttonArrayList.get(1).setDisable(false);

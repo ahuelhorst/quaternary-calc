@@ -19,6 +19,7 @@ public class CalculatorUI extends javafx.application.Application {
     private Constable total;
     private String operator;
     private Main main = new Main();
+    private Calculator calc = new Calculator();
 
     @Override
     public void start(Stage primaryStage) {
@@ -83,7 +84,7 @@ public class CalculatorUI extends javafx.application.Application {
             toggleButtons("enable");
             numOne = field.getText();
             field.clear();
-            total = main.square(numOne,operator);
+            total = calc.square(numOne);
             field.setText(String.valueOf(total));
         };
         buttonArrayList.get(4).setOnAction(square);
@@ -94,7 +95,15 @@ public class CalculatorUI extends javafx.application.Application {
             toggleButtons("disable");
             numOne = field.getText();
             field.clear();
+            total = calc.squareRoot(numOne);
+            if (total == null){
+                field.setText("Error");
+            }
+            else{
+                field.setText(String.valueOf(total));
+            }
         };
+        buttonArrayList.get(5).setOnAction(root);
         //equals button
         buttonArrayList.add(createButton("="));
         EventHandler<ActionEvent> equals = e -> {

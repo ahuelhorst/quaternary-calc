@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Tests" tests="14" skipped="0" failures="0" errors="0" timestamp="2022-09-09T19:40:48" hostname="BIMO" time="0.035">
+  <properties/>
+  <testcase name="divideTest()" classname="Tests" time="0.017"/>
+  <testcase name="addTest()" classname="Tests" time="0.0"/>
+  <testcase name="convertTest()" classname="Tests" time="0.001"/>
+  <testcase name="calcExpressionsDivisionTest()" classname="Tests" time="0.001"/>
+  <testcase name="revertTest()" classname="Tests" time="0.001"/>
+  <testcase name="squareRootTest2()" classname="Tests" time="0.001"/>
+  <testcase name="squareRootTest3()" classname="Tests" time="0.001"/>
+  <testcase name="squareRootTest()" classname="Tests" time="0.001"/>
+  <testcase name="calcExpressionsAdditionTest()" classname="Tests" time="0.0"/>
+  <testcase name="multiplyTest()" classname="Tests" time="0.0"/>
+  <testcase name="subtractTest()" classname="Tests" time="0.001"/>
+  <testcase name="calcExpressionsMultiplyTest()" classname="Tests" time="0.0"/>
+  <testcase name="calcExpressionsSubtractTest()" classname="Tests" time="0.001"/>
+  <testcase name="squareTest()" classname="Tests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

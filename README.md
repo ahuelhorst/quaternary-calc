@@ -33,6 +33,7 @@
         - Lucas =  Tests
         - Nathan = ReadMe, Tests
         - Luke = UI
+        - Brenden = Toggle button
  ## Manual
  - <strong><u>To run application:</u></strong>
    - Double click run option to run the calculator (shown in picture below)

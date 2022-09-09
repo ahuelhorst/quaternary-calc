@@ -1,15 +1,26 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
-import java.io.IOException;
-
 public class Tests {
 
     Convertor converter = new Convertor();
+    Calculator calculator = new Calculator();
 
     @Test
-    public void covertTest() throws IOException {
+    public void covertTest(){
         int decimal = converter.convert("123");
         Assertions.assertEquals(decimal,27);
+    }
+
+    @Test
+    public void revertTest(){
+        int base4 = converter.revert(27);
+        Assertions.assertEquals(base4, 123);
+    }
+
+    @Test
+    public void addTest(){
+        int sum = calculator.add(5,10);
+        Assertions.assertEquals(sum,15);
     }
 }

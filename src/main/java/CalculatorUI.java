@@ -16,7 +16,7 @@ public class CalculatorUI extends javafx.application.Application {
     private ArrayList<Button> buttonArrayList = new ArrayList<>();
     private String numOne;
     private String numTwo;
-    private int total;
+    private Constable total;
     private String operator;
     private Main main = new Main();
 

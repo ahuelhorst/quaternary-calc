@@ -18,11 +18,13 @@ public class Main {
         if (operator.equals("/")) {
             answer = calculator.divide(num1, num2);
         }
-        if (operator.equals("X\u00B2")) {
+        return answer;
+    }
+
+    public int square(String num1, String operator){
+        int answer = 0;
+        if (operator == "square"){
             answer = calculator.square(num1);
-        }
-        if (operator.equals("\u221A")) {
-            answer = calculator.squareRoot(num1);
         }
         return answer;
     }

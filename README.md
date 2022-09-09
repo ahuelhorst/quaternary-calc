@@ -36,7 +36,9 @@
  ## Manual
  - <strong><u>To run application:</u></strong>
    - Double click run option to run the calculator (shown in picture below)
- <img width="359" alt="run" src="https://user-images.githubusercontent.com/89402649/189438829-a8f5a448-234e-438c-a8e5-8c798c872240.png">
- - <strong><u>How to Operate the Calculator:</u></strong>
-   - Select first number, then select operator (+,-,*,or /), finally select the = button
+    <img width="359" alt="run" src="https://user-images.githubusercontent.com/89402649/189438829-a8f5a448-234e-438c-a8e5-8c798c872240.png">
+ - <strong><u>To operate calculator:</u></strong>
    - For square & square root: select number, then select operator (square or square root)
+   - For all other operations(+,-,*,/): select first number, then select operator, then press "=" button
+
+   

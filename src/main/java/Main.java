@@ -4,8 +4,8 @@ public class Main {
     Calculator calculator = new Calculator();
 
     //takes math expression(String) as param and returns answer(int)
-    public int calculateExpression(String num1, String operator, String num2) {
-        int answer = 0;
+    public Constable calculateExpression(String num1, String operator, String num2) {
+        Constable answer = 0;
         if (operator.equals("+")) {
             answer = calculator.add(num1, num2);
         }
@@ -21,9 +21,9 @@ public class Main {
         if (operator.equals("X\u00B2")) {
             answer = calculator.square(num1);
         }
-        /*if (operator.equals("\u221A")) {
+        if (operator.equals("\u221A")) {
             answer = calculator.squareRoot(num1);
-        }*/
+        }
         return answer;
     }
 

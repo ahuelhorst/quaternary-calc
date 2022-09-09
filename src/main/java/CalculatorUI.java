@@ -78,8 +78,23 @@ public class CalculatorUI extends javafx.application.Application {
         buttonArrayList.get(3).setOnAction(divide);
         //square button
         buttonArrayList.add(createButton("X\u00B2")); //Square
+        EventHandler<ActionEvent> square = e -> {
+            operator = "square";
+            toggleButtons("enable");
+            numOne = field.getText();
+            field.clear();
+            total = main.square(numOne,operator);
+            field.setText(String.valueOf(total));
+        };
+        buttonArrayList.get(4).setOnAction(square);
         //square root button
         buttonArrayList.add(createButton("\u221A")); //Square Root
+        EventHandler<ActionEvent> root = e -> {
+            operator = "root";
+            toggleButtons("disable");
+            numOne = field.getText();
+            field.clear();
+        };
         //equals button
         buttonArrayList.add(createButton("="));
         EventHandler<ActionEvent> equals = e -> {
@@ -115,6 +130,7 @@ public class CalculatorUI extends javafx.application.Application {
         buttonArrayList.get(11).setOnAction(three);
         return buttonArrayList;
     }
+
     public TilePane createTile(ArrayList<Button> buttonList){
         TilePane tile = new TilePane();
         tile.setHgap(10);

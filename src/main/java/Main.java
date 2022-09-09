@@ -3,7 +3,7 @@ public class Main {
 
     //takes math expression(String) as param and returns answer(int)
     public int calculateExpression(String input) {
-        String[] arr = input.split("[\s+-]|[\s*]|/"); //split input into the two numbers b/w operator
+        String[] arr = input.split("[+|-|*|/]"); //split input into the two numbers b/w operator
         String num1 = arr[0];
         String num2 = arr[1];
         int answer = 0; //initialize answer

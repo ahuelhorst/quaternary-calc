@@ -5,10 +5,11 @@ public class Tests {
 
     Convertor converter = new Convertor();
     Calculator calculator = new Calculator();
+    Main main = new Main();
 
     //Convertor methods
     @Test
-    public void covertTest(){
+    public void convertTest(){
         int decimal = converter.convert("123");
         Assertions.assertEquals(decimal,27);
     }
@@ -16,7 +17,7 @@ public class Tests {
     @Test
     public void revertTest(){
         int base4 = converter.revert(27);
-        Assertions.assertEquals(base4, 123);
+        Assertions.assertEquals(base4,123);
     }
 
     //Calculator methods
@@ -56,4 +57,10 @@ public class Tests {
 //        Assertions.assertEquals(3,sqrt);
 //    }
 
+    @Test
+    public void calcExpressionsTest(){
+        int expected = 12;
+        int actual = main.calculateExpression("10+2");
+        Assertions.assertEquals(expected,actual);
+    }
 }

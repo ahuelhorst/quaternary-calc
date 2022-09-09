@@ -1,3 +1,5 @@
+import java.lang.constant.Constable;
+
 public class Calculator {
     Convertor convertor = new Convertor();
 
@@ -25,5 +27,17 @@ public class Calculator {
     public int square(String num1){
         int newNum1 = convertor.convert(num1);
         return convertor.revert(newNum1*newNum1);
+    }
+
+    public Constable squareRoot(String num1){
+        int newNum1 = convertor.convert(num1);
+        double sqrtRaw = Math.sqrt(newNum1);
+        int tst = (int)(sqrtRaw + 0.5);
+        if (tst*tst == newNum1){
+            return convertor.revert(tst);
+        }
+        else{
+            return null;
+        }
     }
 }

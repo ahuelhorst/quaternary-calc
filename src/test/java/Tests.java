@@ -10,52 +10,60 @@ public class Tests {
     //Convertor methods
     @Test
     public void convertTest(){
-        int decimal = converter.convert("123");
-        Assertions.assertEquals(decimal,27);
+        int decimal = converter.convert("123"); // base4
+        Assertions.assertEquals(decimal,27); // base10
     }
 
     @Test
     public void revertTest(){
-        int base4 = converter.revert(27);
-        Assertions.assertEquals(base4,123);
+        int base4 = converter.revert(27); // base10
+        Assertions.assertEquals(base4,123); // base4
     }
 
     //Calculator methods
     @Test
     public void squareTest(){
-        int sqa = calculator.square("12");
-        Assertions.assertEquals(210,sqa);
+        int sqa = calculator.square("12"); // 6 base10
+        Assertions.assertEquals(210,sqa); // 36 base10
     }
 
     @Test
     public void addTest(){
-        int sum = calculator.add("2","2");
-        Assertions.assertEquals(10,sum);
+        int sum = calculator.add("2","2"); // 2 base4
+        Assertions.assertEquals(10,sum); // 4 base4
     }
 
     @Test
     public void divideTest(){
-        int ans = calculator.divide("210","12");
-        Assertions.assertEquals(12,ans);
+        int ans = calculator.divide("210","12"); // 36/6 base10
+        Assertions.assertEquals(12,ans); // 6 base10
     }
 
     @Test
     public void subtractTest(){
-        int ans = calculator.subtract("12","3");
-        Assertions.assertEquals(3,ans);
+        int ans = calculator.subtract("12","3"); // 6-3 base 10
+        Assertions.assertEquals(3,ans); // 3 base 10
     }
 
     @Test
     public void multiplyTest(){
-        int ans = calculator.multiply("3","5");
-        Assertions.assertEquals(33,ans);
+        int ans = calculator.multiply("3","11"); // 3 and 5 base4
+        Assertions.assertEquals(33,ans); // 15 base10
     }
 
-//    @Test
-//    public void squareRootTest(){
-//        int sqrt = calculator.squareRoot("21");
-//        Assertions.assertEquals(3,sqrt);
-//    }
+    @Test
+    public void squareRootTest(){
+        //sqrt of 9=3?
+        int sqrt = (int) calculator.squareRoot("21"); // 21 base4 = 9 base10
+        Assertions.assertEquals(3,sqrt);
+    }
+
+    @Test
+    public void squareRootTest2(){
+        //sqrt of 16=4?
+        int sqrt = (int) calculator.squareRoot("100"); // 100 base4 = 16 base10
+        Assertions.assertEquals(10,sqrt); // 10 base4 = 4 base10
+    }
 
     @Test
     public void calcExpressionsTest(){

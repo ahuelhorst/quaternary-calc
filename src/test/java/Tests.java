@@ -71,7 +71,7 @@ public class Tests {
     public void squareRootTest3(){
         //sqrt of 10=null?
         Constable sqrt = calculator.squareRoot("22"); // 22 base4 = 10 base10
-        Assertions.assertNull(sqrt);
+        Assertions.assertEquals(0,sqrt);
     }
 
     //Main method

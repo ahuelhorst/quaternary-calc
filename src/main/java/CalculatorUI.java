@@ -19,6 +19,7 @@ public class CalculatorUI extends javafx.application.Application {
     private Constable total;
     private String operator;
     private Main main = new Main();
+    private Calculator calc = new Calculator();
 
     @Override
     public void start(Stage primaryStage) {
@@ -45,7 +46,6 @@ public class CalculatorUI extends javafx.application.Application {
             operator = "+";
             toggleButtons("disable");
             numOne = field.getText();
-            System.out.println(numOne);
             field.clear();
         };
         buttonArrayList.get(0).setOnAction(add);
@@ -83,7 +83,7 @@ public class CalculatorUI extends javafx.application.Application {
             toggleButtons("enable");
             numOne = field.getText();
             field.clear();
-            total = main.square(numOne,operator);
+            total = calc.square(numOne);
             field.setText(String.valueOf(total));
         };
         buttonArrayList.get(4).setOnAction(square);
@@ -91,10 +91,18 @@ public class CalculatorUI extends javafx.application.Application {
         buttonArrayList.add(createButton("\u221A")); //Square Root
         EventHandler<ActionEvent> root = e -> {
             operator = "root";
-            toggleButtons("disable");
             numOne = field.getText();
             field.clear();
+            total = calc.squareRoot(numOne);
+            if (total == null){
+                toggleButtons("all-disable");
+                field.setText("Error");
+            }
+            else{
+                field.setText(String.valueOf(total));
+            }
         };
+        buttonArrayList.get(5).setOnAction(root);
         //equals button
         buttonArrayList.add(createButton("="));
         EventHandler<ActionEvent> equals = e -> {
@@ -149,6 +157,18 @@ public class CalculatorUI extends javafx.application.Application {
             buttonArrayList.get(3).setDisable(true);
             buttonArrayList.get(4).setDisable(true);
             buttonArrayList.get(5).setDisable(true);
+        } else if (toggle.equals("all-disable")) {
+            buttonArrayList.get(0).setDisable(true);
+            buttonArrayList.get(1).setDisable(true);
+            buttonArrayList.get(2).setDisable(true);
+            buttonArrayList.get(3).setDisable(true);
+            buttonArrayList.get(4).setDisable(true);
+            buttonArrayList.get(5).setDisable(true);
+            buttonArrayList.get(6).setDisable(true);
+            buttonArrayList.get(8).setDisable(true);
+            buttonArrayList.get(9).setDisable(true);
+            buttonArrayList.get(10).setDisable(true);
+            buttonArrayList.get(11).setDisable(true);
         } else {
             buttonArrayList.get(0).setDisable(false);
             buttonArrayList.get(1).setDisable(false);
@@ -156,6 +176,12 @@ public class CalculatorUI extends javafx.application.Application {
             buttonArrayList.get(3).setDisable(false);
             buttonArrayList.get(4).setDisable(false);
             buttonArrayList.get(5).setDisable(false);
+            buttonArrayList.get(6).setDisable(false);
+            buttonArrayList.get(7).setDisable(false);
+            buttonArrayList.get(8).setDisable(false);
+            buttonArrayList.get(9).setDisable(false);
+            buttonArrayList.get(10).setDisable(false);
+            buttonArrayList.get(11).setDisable(false);
         }
     }
 }

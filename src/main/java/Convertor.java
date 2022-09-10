@@ -2,7 +2,7 @@ public class Convertor {
 
     //convert base 4 number to base 10 number
     //returns int base 10 num
-    public int convert(String base4) {
+    public static int convert(String base4) {
         int total = 0;
         int a = 1;
         String[] splitArray=base4.split("");
@@ -16,7 +16,7 @@ public class Convertor {
     }
     //convert base 10 number to base 4 number
     //returns int base 10
-    public int revert(int base10) {
+    public static int revert(int base10) {
         String s = Integer.toString(base10, 4);
         return Integer.parseInt(s);
     }

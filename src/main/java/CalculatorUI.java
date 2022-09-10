@@ -8,7 +8,6 @@ import javafx.scene.layout.TilePane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
-import java.lang.constant.Constable;
 import java.util.ArrayList;
 
 public class CalculatorUI extends javafx.application.Application {
@@ -16,7 +15,7 @@ public class CalculatorUI extends javafx.application.Application {
     private ArrayList<Button> buttonArrayList = new ArrayList<>();
     private String numOne;
     private String numTwo;
-    private Constable total;
+    private int total;
     private String operator;
     private Main main = new Main();
     private Calculator calc = new Calculator();
@@ -94,7 +93,7 @@ public class CalculatorUI extends javafx.application.Application {
             numOne = field.getText();
             field.clear();
             total = calc.squareRoot(numOne);
-            if (total == null){
+            if (total == 0){
                 toggleButtons("all-disable");
                 field.setText("Error");
             }
@@ -136,6 +135,33 @@ public class CalculatorUI extends javafx.application.Application {
         buttonArrayList.add(createButton("3"));
         EventHandler<ActionEvent> three = e -> field.appendText("3");
         buttonArrayList.get(11).setOnAction(three);
+
+        //bases
+        buttonArrayList.add(createButton("b4"));
+        buttonArrayList.get(12).setDisable(true);
+        EventHandler<ActionEvent> base4 = e -> {
+            buttonArrayList.get(12).setDisable(true);
+            buttonArrayList.get(13).setDisable(false);
+            toggleButtons("enable");
+            numTwo = field.getText();
+            field.clear();
+            total = Convertor.revert(Integer.parseInt(numTwo));
+            field.setText(String.valueOf(total));
+        };
+        buttonArrayList.get(12).setOnAction(base4);
+
+        buttonArrayList.add(createButton("b10"));
+        buttonArrayList.get(1).setDisable(true);
+        EventHandler<ActionEvent> base10 = e -> {
+            buttonArrayList.get(12).setDisable(false);
+            buttonArrayList.get(13).setDisable(true);
+            toggleButtons("all-disable");
+            numTwo = field.getText();
+            field.clear();
+            total = Convertor.convert(numTwo);
+            field.setText(String.valueOf(total));
+        };
+        buttonArrayList.get(13).setOnAction(base10);
         return buttonArrayList;
     }
 

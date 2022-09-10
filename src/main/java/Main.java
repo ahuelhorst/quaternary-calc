@@ -1,11 +1,9 @@
-import java.lang.constant.Constable;
-
 public class Main {
     Calculator calculator = new Calculator();
 
     //takes math expression(String) as param and returns answer(int)
-    public Constable calculateExpression(String num1, String operator, String num2) {
-        Constable answer = 0;
+    public int calculateExpression(String num1, String operator, String num2) {
+        Integer answer = 0;
         if (operator.equals("+")) {
             answer = calculator.add(num1, num2);
         }

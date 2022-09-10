@@ -28,7 +28,7 @@ public class CalculatorUI extends javafx.application.Application {
         TilePane tile = createTile(createAllButtons());
         root.setTop(field);
         root.setCenter(tile);
-        Scene scene = new Scene(root, 431, 391);
+        Scene scene = new Scene(root, 431, 510);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

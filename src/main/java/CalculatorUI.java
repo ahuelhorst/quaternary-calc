@@ -151,7 +151,6 @@ public class CalculatorUI extends javafx.application.Application {
         buttonArrayList.get(12).setOnAction(base4);
 
         buttonArrayList.add(createButton("b10"));
-        buttonArrayList.get(1).setDisable(true);
         EventHandler<ActionEvent> base10 = e -> {
             buttonArrayList.get(12).setDisable(false);
             buttonArrayList.get(13).setDisable(true);
